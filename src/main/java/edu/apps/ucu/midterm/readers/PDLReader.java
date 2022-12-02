@@ -33,7 +33,6 @@ public class PDLReader extends Reader {
         connection.connect();
         String text = new Scanner(connection.getInputStream()).useDelimiter("\\Z").next();
         JSONObject jsonObject = new JSONObject(text);
-        System.out.println(jsonObject);
         JSONObject data = jsonObject.getJSONArray("data").getJSONObject(0);
         return data;
     }
