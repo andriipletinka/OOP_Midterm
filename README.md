@@ -8,7 +8,7 @@
 
 ### Class diagram
 
-![This is an image](https://github.com/andriipletinka/OOP_Midterm/blob/master/MidtermApplication.png)
+![This is an image](https://github.com/andriipletinka/OOP_Midterm/blob/master/ClassDiagram.png)
 
 ### Demo:
 
