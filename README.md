@@ -4,11 +4,11 @@
 
 ### Use case diagram
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image]((https://github.com/andriipletinka/OOP_Midterm/blob/master/user_diagram.jpg))
 
 ### Class diagram
 
-![This is an image](https://github.com/andriipletinka/OOP_Midterm/blob/master/user_diagram.jpg)
+![This is an image](https://github.com/andriipletinka/OOP_Midterm/blob/master/MidtermApplication.png))
 
 ### Demo:
 
