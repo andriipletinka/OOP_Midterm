@@ -2,6 +2,14 @@
 
 ## APPLICATION FOR WEB SCRAPING
 
+### Use case diagram
+
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
+### Class diagram
+
+![This is an image](https://github.com/andriipletinka/OOP_Midterm/blob/master/user_diagram.jpg)
+
 ### Demo:
 
 https://oop-midterm--web-scraper.herokuapp.com/
