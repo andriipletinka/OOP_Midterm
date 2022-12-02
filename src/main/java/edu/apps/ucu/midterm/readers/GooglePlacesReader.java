@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
 
 @NoArgsConstructor
-public class GooglePlacesReader {
+public class GooglePlacesReader extends Reader {
     private static GooglePlacesReader googlePlacesReader;
     private static String API_KEY = "AIzaSyDcmv57yKEX5m4fCOp46I9D1-gFHO4nY90";
 

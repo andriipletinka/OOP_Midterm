@@ -1,10 +1,10 @@
-GET http://localhost:8080/api
+GET http://localhost:8080/responses
 
 ###
-POST http://localhost:8080/api
+POST http://localhost:8080/responses
 Content-Type: application/json
 
 {
-  "name": "ucu",
-  "location": "ukraine"
+  "name": "1234",
+  "address": "qwer"
 }

@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Configuration;
 public class Config {
     @Bean
     public String getData() {
-        return "hello world";
+        return "";
     }
 }

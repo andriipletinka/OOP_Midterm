@@ -1,6 +1,7 @@
 package edu.apps.ucu.midterm;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.*;
@@ -20,7 +21,7 @@ public class Response {
     private String icon;
     private int employees;
     private String address;
-    @Id
+    @Id @GeneratedValue
     private int id;
 
     @Override

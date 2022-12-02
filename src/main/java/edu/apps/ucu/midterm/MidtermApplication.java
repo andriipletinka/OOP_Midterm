@@ -7,15 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootApplication
 public class MidtermApplication {
-    @Autowired
-    public String data;
-
     public static void main(String[] args) {
         SpringApplication.run(MidtermApplication.class, args);
-    }
-
-    @GetMapping
-    public String printData() {
-        return data;
     }
 }
