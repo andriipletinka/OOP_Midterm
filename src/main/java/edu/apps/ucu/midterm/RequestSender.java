@@ -18,13 +18,14 @@ public class RequestSender {
     }
 
     @SneakyThrows
-    public Response sendRequest(String website) {
-        JSONObject data = PDLReader.getInstance().scrapeData(website);
-        String address = GooglePlacesReader.getInstance().scrapeAddress(website);
-                Response.ResponseBuilder responseBuilder = Response.builder();
-        String domain = data.getString("website");
+    public Response sendRequest(Request request) {
+        String domain = request.getDomain();
+        JSONObject data = PDLReader.getInstance().scrapeData(domain);
+        String address = GooglePlacesReader.getInstance().scrapeAddress(domain);
+        Response.ResponseBuilder responseBuilder = Response.builder();
+        String website = data.getString("website");
         String name = data.getString("name");
-        responseBuilder.domain(domain).name(name);
+        responseBuilder.domain(website).name(name);
         if (!data.isNull("twitter_url")) {
             String twitter = data.getString("twitter_url");
             responseBuilder.twitter(twitter);
@@ -39,7 +40,14 @@ public class RequestSender {
             int employees = data.getInt("employee_count");
             responseBuilder.employees(employees);
         }
-        Response response = responseBuilder.address(address).build();
-        return response;
+        if (address.equals("couldn't find")) {
+            JSONObject location = data.getJSONObject("location");
+            String newAddress = location.getString("street_address") + ", " + location.getString("name");
+            Response response = responseBuilder.address(newAddress).build();
+            return response;
+        } else {
+            Response response = responseBuilder.address(address).build();
+            return response;
+        }
     }
 }

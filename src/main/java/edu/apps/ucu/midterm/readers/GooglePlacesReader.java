@@ -23,9 +23,12 @@ public class GooglePlacesReader extends Reader {
         GeoApiContext context = new GeoApiContext.Builder()
                 .apiKey(API_KEY)
                 .build();
-        PlacesSearchResponse placesRespose = new TextSearchRequest(context).query(query).await();
-        String address = placesRespose.results[0].formattedAddress;
+        PlacesSearchResponse placesResponse = new TextSearchRequest(context).query(query).await();
+        if (placesResponse.results.length != 0) {
+            String address = placesResponse.results[0].formattedAddress;
+            return address;
+        }
         context.shutdown();
-        return address;
+        return "couldn't find";
     }
 }
