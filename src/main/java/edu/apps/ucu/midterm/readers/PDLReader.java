@@ -15,7 +15,7 @@ import static java.lang.String.format;
 @NoArgsConstructor
 public class PDLReader extends Reader {
     private static PDLReader pdlReader;
-    private static String API_KEY = "59baef6a4a4b96a12b99d5d6336c7be5c55b6804da3838996ebcd963459f4dcd";
+    private static String API_KEY = "";
 
     public static PDLReader getInstance() {
         if (pdlReader == null) {
